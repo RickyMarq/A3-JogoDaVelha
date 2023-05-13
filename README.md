@@ -2,10 +2,10 @@
   <a href="https://ant.design">
     <img width="200" src="https://loja.anhembionline.com.br/media/logo/stores/7/ANHEMBI.png">
   </a>
-  <h1 align="center">A3 - Nome do Jogo</h1>
+  <h1 align="center">A3 - Jogo da Velha </h1>
 </p>
 
-<p align="center"> Documentação Projeto (Nome do Jogo) A3
+<p align="center"> Documentação Projeto Jogo da Velha A3
   
   <p align="center">
   <a href="#introdução">Introdução</a> •
