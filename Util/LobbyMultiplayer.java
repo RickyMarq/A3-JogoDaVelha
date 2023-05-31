@@ -21,7 +21,7 @@ public class LobbyMultiplayer implements Runnable {
     
     private Socket primeiroJogador;
     private Socket segundoJogador;
-    private char[][] cell = new char[3][3];
+    private char[][] tabuleiroJogoDaVelha = new char[3][3];
     ObjectInputStream inJogador1;
     ObjectOutputStream outJogador1;
     ObjectInputStream inJogador2;
@@ -32,16 +32,16 @@ public class LobbyMultiplayer implements Runnable {
     public static int PLAYER2_WON = 2;
     public static final int CONTINUE = 4;
     public static int DRAW = 3;
-
-    // Criando array 3x3
-    
+  
      public LobbyMultiplayer(Socket primeiroJogador, Socket segundoJogador) {
         this.primeiroJogador = primeiroJogador;
         this.segundoJogador = segundoJogador; 
         
+     // Criando array 3x3
+   
      for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                cell[i][j] = ' ';
+                tabuleiroJogoDaVelha[i][j] = ' ';
             }
         }
     } 
@@ -73,7 +73,7 @@ public class LobbyMultiplayer implements Runnable {
                 // Obter dados do jogador 1.
                 int row = doJogador1.readInt();
                 int column = doJogador1.readInt();
-                cell[row][column] = 'X';
+                tabuleiroJogoDaVelha[row][column] = 'X';
 
                 System.out.println("DEBUG: PRTN JOGADOR 1 " + row + column);
                 
@@ -96,6 +96,8 @@ public class LobbyMultiplayer implements Runnable {
               }
               /*
               
+              // DEBUG: PRINTAR TABULEIRO
+              
               for (int i = 0; i < 3; i++) {
                  for (int j = 0; j < 3; j++) {
              System.out.print(cell[i][j] + " ");
@@ -105,7 +107,7 @@ public class LobbyMultiplayer implements Runnable {
                  */
                 row = doJogador2.readInt();
                 column = doJogador2.readInt();
-                cell[row][column] = 'O';
+                tabuleiroJogoDaVelha[row][column] = 'O';
  
                 
                 
@@ -136,23 +138,23 @@ public class LobbyMultiplayer implements Runnable {
     
       private boolean ganhou(char token) {
         //checking main diagonal
-        if ((cell[0][0] == token) && (cell[1][1] == token) && (cell[2][2] == token))
+        if ((tabuleiroJogoDaVelha[0][0] == token) && (tabuleiroJogoDaVelha[1][1] == token) && (tabuleiroJogoDaVelha[2][2] == token))
             return true;
         
         //checking second diagonal
-        if ((cell[0][2] == token) && (cell[1][1] == token) && (cell[2][0] == token))
+        if ((tabuleiroJogoDaVelha[0][2] == token) && (tabuleiroJogoDaVelha[1][1] == token) && (tabuleiroJogoDaVelha[2][0] == token))
             return true;
         
         //checking rows
         for (int i = 0; i < 3; i++) {
-            if ((cell[i][0] == token) && (cell[i][1] == token) && (cell[i][2] == token)) {
+            if ((tabuleiroJogoDaVelha[i][0] == token) && (tabuleiroJogoDaVelha[i][1] == token) && (tabuleiroJogoDaVelha[i][2] == token)) {
                 return true;
             }
         }
         
         //checking columns
         for (int j = 0; j < 3; j++) {
-            if ((cell[0][j] == token) && (cell[1][j] == token) && (cell[2][j] == token))
+            if ((tabuleiroJogoDaVelha[0][j] == token) && (tabuleiroJogoDaVelha[1][j] == token) && (tabuleiroJogoDaVelha[2][j] == token))
                 return true;
         }
 
@@ -162,7 +164,7 @@ public class LobbyMultiplayer implements Runnable {
     private boolean estaCheio() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (cell[i][j] == ' ') {
+                if (tabuleiroJogoDaVelha[i][j] == ' ') {
                     return false;
                 }
             }

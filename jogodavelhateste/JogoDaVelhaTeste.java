@@ -19,8 +19,6 @@ public class JogoDaVelhaTeste {
      * @param args the command line arguments
      */
    
-//    public static int array[][] = new int[3][3];
-    
     public static ArrayList<ArrayList<Integer>> arr = new ArrayList<>();
     public static boolean VezDoJogador = true;
     public static ArrayList<String> arrayServer = new ArrayList<String>(); 

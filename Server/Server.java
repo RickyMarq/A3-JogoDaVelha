@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Server;
-import Util.playerThread;
+
+import java.util.Scanner;
 import Util.thread;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -16,16 +17,19 @@ public class Server {
     
      public static void main(String[] args) {
         ServerSocket serverSocket;
+        Scanner teclado = new Scanner(System.in);
         int jogadores;
         Socket socketClient = null;
         int porta = 54321;
         boolean continuar = true;
         String ip = "127.0.0.1";
 
+         System.out.println("Insira a porta que o servidor será hospedado");
+         porta = teclado.nextInt();
         
         try {
             serverSocket = new ServerSocket(porta);
-            System.out.println("Sucesso, servidor rodando na " + "Porta " + porta + "IP " + ip);
+            System.out.println("Sucesso, servidor rodando na " + "Porta " + porta + " IP " + ip);
         } catch (Exception e) {
             System.out.println("Erro" + e.getMessage());
             return; 

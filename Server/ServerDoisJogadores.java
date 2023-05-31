@@ -27,13 +27,14 @@ public class ServerDoisJogadores {
             while(true) {
                 System.out.println("Esperando jogador 1...");
                 Socket primeiroJogador = serverSocket.accept();
-                System.out.println("Conectado, jogador 1: " + "IP address " + primeiroJogador.getInetAddress().getHostAddress());
+                System.out.println("Conectado, jogador 1: " + "Endereço de IP: " + primeiroJogador.getInetAddress().getHostAddress());
                 new DataOutputStream(primeiroJogador.getOutputStream()).writeInt(jogador1);
 
                 Socket segundoJogador = serverSocket.accept();
-                System.out.println("Conectado, jogador 2: " + "IP address " + segundoJogador.getInetAddress().getHostAddress());
+                System.out.println("Conectado, jogador 2: " + "Endereço de IP: " + segundoJogador.getInetAddress().getHostAddress());
                 new DataOutputStream(segundoJogador.getOutputStream()).writeInt(jogador2);
                 
+                // Iniciando Lobby para modo multiplayer.
                 LobbyMultiplayer task = new LobbyMultiplayer(primeiroJogador, segundoJogador);
                 Thread t1 = new Thread(task); 
                 t1.start(); 
