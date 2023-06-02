@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package jogodavelhateste;
+package jogodavelha;
 
 import java.awt.Color;
 
@@ -54,11 +54,11 @@ public class ChooseGameScreen extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogodavelhateste/busts-in-silhouette_1f465.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogodavelha/busts-in-silhouette_1f465.png"))); // NOI18N
 
         jLabel4.setText("Status: Conectado 🟢 ");
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogodavelhateste/laptop_1f4bb.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogodavelha/laptop_1f4bb.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -111,7 +111,7 @@ public class ChooseGameScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        jogodavelhateste.JogoDaVelhaTeste.arrayServer.removeAll(jogodavelhateste.JogoDaVelhaTeste.arrayServer);
+        jogodavelha.JogoDaVelhaMain.arrayServer.removeAll(jogodavelha.JogoDaVelhaMain.arrayServer);
         PlayerPlayerScreen home = new PlayerPlayerScreen();
         ChooseGameScreen.super.setVisible(false);
         home.getContentPane().setBackground( Color.lightGray );
@@ -122,7 +122,7 @@ public class ChooseGameScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jogodavelhateste.JogoDaVelhaTeste.arrayServer.removeAll(jogodavelhateste.JogoDaVelhaTeste.arrayServer);
+        jogodavelha.JogoDaVelhaMain.arrayServer.removeAll(jogodavelha.JogoDaVelhaMain.arrayServer);
         tela home = new tela();
         ChooseGameScreen.super.setVisible(false);
         home.getContentPane().setBackground( Color.lightGray );

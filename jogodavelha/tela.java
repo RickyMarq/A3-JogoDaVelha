@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package jogodavelhateste;
+package jogodavelha;
 
 import Util.Req;
 import Util.Resp;
@@ -11,6 +11,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -229,15 +230,14 @@ public class tela extends javax.swing.JFrame {
         String checarTexto = jButton2.getText();
 
         if (checarTexto == "X" || checarTexto == "O") {
-            System.out.println("Campo já selecionado");
+            JOptionPane.showMessageDialog(null, "Campo já selecionado", "Aviso", JOptionPane.WARNING_MESSAGE);;
         } else {
-        jogodavelhateste.JogoDaVelhaTeste.arr.get(0).set(1, 1);
-        System.out.println(jogodavelhateste.JogoDaVelhaTeste.arr);
+        jogodavelha.JogoDaVelhaMain.arr.get(0).set(1, 1);
+        System.out.println(jogodavelha.JogoDaVelhaMain.arr);
         jButton2.setText("X");
-//        jogodavelhateste.JogoDaVelhaTeste.checkBoard1x1();
         ServerPlay(0, 1);
-        jLabel2.setText(""+jogodavelhateste.JogoDaVelhaTeste.playerWins);
-        jLabel4.setText(""+jogodavelhateste.JogoDaVelhaTeste.computerWins);
+        jLabel2.setText(""+jogodavelha.JogoDaVelhaMain.playerWins);
+        jLabel4.setText(""+jogodavelha.JogoDaVelhaMain.computerWins);
 
         }
     
@@ -248,15 +248,15 @@ public class tela extends javax.swing.JFrame {
         String checarTexto = jButton1.getText();
 
         if (checarTexto == "X" || checarTexto == "O") {
-            System.out.println("Campo já selecionado");
+            JOptionPane.showMessageDialog(null, "Campo já selecionado", "Aviso", JOptionPane.WARNING_MESSAGE);;
         } else {
-        jogodavelhateste.JogoDaVelhaTeste.arr.get(0).set(0, 1);
-        System.out.println(jogodavelhateste.JogoDaVelhaTeste.arr);
+        jogodavelha.JogoDaVelhaMain.arr.get(0).set(0, 1);
+        System.out.println(jogodavelha.JogoDaVelhaMain.arr);
         jButton1.setText("X");
  //       jogodavelhateste.JogoDaVelhaTeste.checkBoard1x1();
         ServerPlay(0, 0);
-        jLabel2.setText(""+jogodavelhateste.JogoDaVelhaTeste.playerWins);
-        jLabel4.setText(""+jogodavelhateste.JogoDaVelhaTeste.computerWins);
+        jLabel2.setText(""+jogodavelha.JogoDaVelhaMain.playerWins);
+        jLabel4.setText(""+jogodavelha.JogoDaVelhaMain.computerWins);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -264,15 +264,15 @@ public class tela extends javax.swing.JFrame {
         String checarTexto = jButton3.getText();
 
         if (checarTexto == "X" || checarTexto == "O") {
-            System.out.println("Campo já selecionado");
+            JOptionPane.showMessageDialog(null, "Campo já selecionado", "Aviso", JOptionPane.WARNING_MESSAGE);;
         } else {
-        jogodavelhateste.JogoDaVelhaTeste.arr.get(0).set(2, 1);
-        System.out.println(jogodavelhateste.JogoDaVelhaTeste.arr);
+        jogodavelha.JogoDaVelhaMain.arr.get(0).set(2, 1);
+        System.out.println(jogodavelha.JogoDaVelhaMain.arr);
         jButton3.setText("X");
 //        jogodavelhateste.JogoDaVelhaTeste.checkBoard1x1();
         ServerPlay(0, 2);
-        jLabel2.setText(""+jogodavelhateste.JogoDaVelhaTeste.playerWins);
-        jLabel4.setText(""+jogodavelhateste.JogoDaVelhaTeste.computerWins);
+        jLabel2.setText(""+jogodavelha.JogoDaVelhaMain.playerWins);
+        jLabel4.setText(""+jogodavelha.JogoDaVelhaMain.computerWins);
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -280,15 +280,15 @@ public class tela extends javax.swing.JFrame {
         String checarTexto = jButton4.getText();
 
         if (checarTexto == "X" || checarTexto == "O") {
-            System.out.println("Campo já selecionado");
+            JOptionPane.showMessageDialog(null, "Campo já selecionado", "Aviso", JOptionPane.WARNING_MESSAGE);;
         } else {
-        jogodavelhateste.JogoDaVelhaTeste.arr.get(1).set(0, 1);
-        System.out.println(jogodavelhateste.JogoDaVelhaTeste.arr);
+        jogodavelha.JogoDaVelhaMain.arr.get(1).set(0, 1);
+        System.out.println(jogodavelha.JogoDaVelhaMain.arr);
         jButton4.setText("X");
 //        jogodavelhateste.JogoDaVelhaTeste.checkBoard1x1();
         ServerPlay(1, 0);
-        jLabel2.setText(""+jogodavelhateste.JogoDaVelhaTeste.playerWins);
-        jLabel4.setText(""+jogodavelhateste.JogoDaVelhaTeste.computerWins);
+        jLabel2.setText(""+jogodavelha.JogoDaVelhaMain.playerWins);
+        jLabel4.setText(""+jogodavelha.JogoDaVelhaMain.computerWins);
 
         }
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -297,15 +297,15 @@ public class tela extends javax.swing.JFrame {
         String checarTexto = jButton5.getText();
 
         if (checarTexto == "X" || checarTexto == "O") {
-            System.out.println("Campo já selecionado");
+            JOptionPane.showMessageDialog(null, "Campo já selecionado", "Aviso", JOptionPane.WARNING_MESSAGE);;
         } else {        
-        jogodavelhateste.JogoDaVelhaTeste.arr.get(1).set(1, 1);
-        System.out.println(jogodavelhateste.JogoDaVelhaTeste.arr);
+        jogodavelha.JogoDaVelhaMain.arr.get(1).set(1, 1);
+        System.out.println(jogodavelha.JogoDaVelhaMain.arr);
         jButton5.setText("X");
 //        jogodavelhateste.JogoDaVelhaTeste.checkBoard1x1();
         ServerPlay(1, 1);
-        jLabel2.setText(""+jogodavelhateste.JogoDaVelhaTeste.playerWins);
-        jLabel4.setText(""+jogodavelhateste.JogoDaVelhaTeste.computerWins);
+        jLabel2.setText(""+jogodavelha.JogoDaVelhaMain.playerWins);
+        jLabel4.setText(""+jogodavelha.JogoDaVelhaMain.computerWins);
 
         }
     }//GEN-LAST:event_jButton5ActionPerformed
@@ -314,15 +314,15 @@ public class tela extends javax.swing.JFrame {
         String checarTexto = jButton6.getText();
 
         if (checarTexto == "X" || checarTexto == "O") {
-            System.out.println("Campo já selecionado");
+            JOptionPane.showMessageDialog(null, "Campo já selecionado", "Aviso", JOptionPane.WARNING_MESSAGE);;
         } else {
-        jogodavelhateste.JogoDaVelhaTeste.arr.get(1).set(2, 1);
-        System.out.println(jogodavelhateste.JogoDaVelhaTeste.arr);
+        jogodavelha.JogoDaVelhaMain.arr.get(1).set(2, 1);
+        System.out.println(jogodavelha.JogoDaVelhaMain.arr);
         jButton6.setText("X");
 //       jogodavelhateste.JogoDaVelhaTeste.checkBoard1x1();
         ServerPlay(1, 2);
-        jLabel2.setText(""+jogodavelhateste.JogoDaVelhaTeste.playerWins);
-        jLabel4.setText(""+jogodavelhateste.JogoDaVelhaTeste.computerWins);
+        jLabel2.setText(""+jogodavelha.JogoDaVelhaMain.playerWins);
+        jLabel4.setText(""+jogodavelha.JogoDaVelhaMain.computerWins);
 
         }
     }//GEN-LAST:event_jButton6ActionPerformed
@@ -331,15 +331,15 @@ public class tela extends javax.swing.JFrame {
         String checarTexto = jButton7.getText();
 
         if (checarTexto == "X" || checarTexto == "O") {
-            System.out.println("Campo já selecionado");
+            JOptionPane.showMessageDialog(null, "Campo já selecionado", "Aviso", JOptionPane.WARNING_MESSAGE);;
         } else {        
-        jogodavelhateste.JogoDaVelhaTeste.arr.get(2).set(0, 1);
-        System.out.println(jogodavelhateste.JogoDaVelhaTeste.arr);
+        jogodavelha.JogoDaVelhaMain.arr.get(2).set(0, 1);
+        System.out.println(jogodavelha.JogoDaVelhaMain.arr);
         jButton7.setText("X");
 //       jogodavelhateste.JogoDaVelhaTeste.checkBoard1x1();
         ServerPlay(2, 0);
-        jLabel2.setText(""+jogodavelhateste.JogoDaVelhaTeste.playerWins);
-        jLabel4.setText(""+jogodavelhateste.JogoDaVelhaTeste.computerWins);
+        jLabel2.setText(""+jogodavelha.JogoDaVelhaMain.playerWins);
+        jLabel4.setText(""+jogodavelha.JogoDaVelhaMain.computerWins);
 
         }
     }//GEN-LAST:event_jButton7ActionPerformed
@@ -348,15 +348,15 @@ public class tela extends javax.swing.JFrame {
         String checarTexto = jButton8.getText();
 
         if (checarTexto == "X" || checarTexto == "O") {
-            System.out.println("Campo já selecionado");
+            JOptionPane.showMessageDialog(null, "Campo já selecionado", "Aviso", JOptionPane.WARNING_MESSAGE);;
         } else {        
-        jogodavelhateste.JogoDaVelhaTeste.arr.get(2).set(1, 1);
-        System.out.println(jogodavelhateste.JogoDaVelhaTeste.arr);
+        jogodavelha.JogoDaVelhaMain.arr.get(2).set(1, 1);
+        System.out.println(jogodavelha.JogoDaVelhaMain.arr);
         jButton8.setText("X");
 //        jogodavelhateste.JogoDaVelhaTeste.checkBoard1x1();
         ServerPlay(2, 1);
-        jLabel2.setText(""+jogodavelhateste.JogoDaVelhaTeste.playerWins);
-        jLabel4.setText(""+jogodavelhateste.JogoDaVelhaTeste.computerWins);
+        jLabel2.setText(""+jogodavelha.JogoDaVelhaMain.playerWins);
+        jLabel4.setText(""+jogodavelha.JogoDaVelhaMain.computerWins);
 
         }
     }//GEN-LAST:event_jButton8ActionPerformed
@@ -365,22 +365,30 @@ public class tela extends javax.swing.JFrame {
         String checarTexto = jButton9.getText();
 
         if (checarTexto == "X" || checarTexto == "O") {
-            System.out.println("Campo já selecionado");
+            JOptionPane.showMessageDialog(null, "Campo já selecionado", "Aviso", JOptionPane.WARNING_MESSAGE);;
         } else {        
-        jogodavelhateste.JogoDaVelhaTeste.arr.get(2).set(2, 1);
-        System.out.println(jogodavelhateste.JogoDaVelhaTeste.arr);
+        jogodavelha.JogoDaVelhaMain.arr.get(2).set(2, 1);
+        System.out.println(jogodavelha.JogoDaVelhaMain.arr);
         jButton9.setText("X");
 //        jogodavelhateste.JogoDaVelhaTeste.checkBoard1x1();
         ServerPlay(2, 2);
-        jLabel2.setText(""+jogodavelhateste.JogoDaVelhaTeste.playerWins);
-        jLabel4.setText(""+jogodavelhateste.JogoDaVelhaTeste.computerWins);
+        jLabel2.setText(""+jogodavelha.JogoDaVelhaMain.playerWins);
+        jLabel4.setText(""+jogodavelha.JogoDaVelhaMain.computerWins);
         }
     }//GEN-LAST:event_jButton9ActionPerformed
 
     public void ServerPlay(int row, int col) {
+        
+        Boolean draw = JogoDaVelhaMain.estaCheio(JogoDaVelhaMain.arr);
+
+        if (draw == true) {
+            JOptionPane.showMessageDialog(null, "Empate, você conseguiu perder para um computador 🫠", "Aviso", JOptionPane.WARNING_MESSAGE);
+        }
+
+    
         try {
             // o cliente está pedindo conexão com o servidor que está no IP e Porta informados
-            socket = new Socket(ip, porta);
+            socket = new Socket(Client.Client.ip, Client.Client.porta);
             System.out.println("Conectado com o servidor.");
 //            jLabel1.setText("Vez do Computador");
         } catch (Exception e) {
@@ -394,15 +402,15 @@ public class tela extends javax.swing.JFrame {
             out = new ObjectOutputStream(socket.getOutputStream());
             in = new ObjectInputStream(socket.getInputStream());
             int valor2 = 1;
-            Req request = new Req(valor2, row, col, false, false);
+            Req request = new Req(valor2, row, col, false);
 
             out.writeObject(request);   
             
             Resp response = (Resp) in.readObject();
             
-            jogodavelhateste.JogoDaVelhaTeste.arr.get(response.getRowIndex()).set(response.getColIndex(), response.getPcOperator());
+            jogodavelha.JogoDaVelhaMain.arr.get(response.getRowIndex()).set(response.getColIndex(), response.getPcOperator());
             // DEBUG: Servidor checa o tabuleiro.
-            jogodavelhateste.JogoDaVelhaTeste.checkBoard1x1();
+            jogodavelha.JogoDaVelhaMain.checkBoard1x1();
 
                         
             if (response.getRowIndex() == 0 && response.getColIndex() == 0) {
@@ -433,9 +441,10 @@ public class tela extends javax.swing.JFrame {
     }
     
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        jogodavelha.JogoDaVelhaMain.arrayServer.clear();
         try {
             // o cliente está pedindo conexão com o servidor que está no IP e Porta informados
-            socket = new Socket(ip, porta);
+            socket = new Socket(Client.Client.ip, Client.Client.porta);
             System.out.println("Conectado com o servidor.");
 //            jLabel1.setText("Vez do Computador");
         } catch (Exception e) {
@@ -450,21 +459,21 @@ public class tela extends javax.swing.JFrame {
             out = new ObjectOutputStream(socket.getOutputStream());
             in = new ObjectInputStream(socket.getInputStream());
 
-            Req request = new Req(0, -2, -2, true, false);
+            Req request = new Req(0, -2, -2, true);
 
             out.writeObject(request);   
       
         } catch (Exception e) {
             System.out.println("Erro na comunicação: " + e.getMessage());
         }
-        for (ArrayList<Integer> row :  jogodavelhateste.JogoDaVelhaTeste.arr) {
+        for (ArrayList<Integer> row :  jogodavelha.JogoDaVelhaMain.arr) {
          row.clear();
         for (int j = 0; j < 3; j++) {
             row.add(0);
         }
     }
         
-        jogodavelhateste.JogoDaVelhaTeste.arrayServer.clear();
+      
         jButton1.setText(".");
         jButton2.setText(".");
         jButton3.setText(".");

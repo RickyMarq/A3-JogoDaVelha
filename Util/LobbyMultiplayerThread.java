@@ -17,7 +17,7 @@ import java.util.ArrayList;
  * @author rick
  */
 
-public class LobbyMultiplayer implements Runnable {
+public class LobbyMultiplayerThread implements Runnable {
     
     private Socket primeiroJogador;
     private Socket segundoJogador;
@@ -33,7 +33,7 @@ public class LobbyMultiplayer implements Runnable {
     public static final int CONTINUE = 4;
     public static int DRAW = 3;
   
-     public LobbyMultiplayer(Socket primeiroJogador, Socket segundoJogador) {
+     public LobbyMultiplayerThread(Socket primeiroJogador, Socket segundoJogador) {
         this.primeiroJogador = primeiroJogador;
         this.segundoJogador = segundoJogador; 
         
@@ -49,17 +49,7 @@ public class LobbyMultiplayer implements Runnable {
     @Override
     public void run() {
       
-        try {   
-//            inJogador1 = new ObjectInputStream(primeiroJogador.getInputStream());
-//            outJogador1 = new ObjectOutputStream(primeiroJogador.getOutputStream());
- //           Req requestInJogador1 = (Req) inJogador1.readObject(); 
- //           inJogador2 = new ObjectInputStream(segundoJogador.getInputStream());
- //           outJogador2 = new ObjectOutputStream(segundoJogador.getOutputStream());
- //           Req requestInJogador2 = (Req) inJogador2.readObject();
-            
- //           System.out.println("DEBUG MODE: Recebido jogador 1: " + requestInJogador1.getRowIndex() + requestInJogador1.getColIndex());
- //           System.out.println("DEBUG MODE: Recebido jogador 2: " + requestInJogador2.getRowIndex() + requestInJogador2.getColIndex());
-                   
+        try {                      
             DataInputStream doJogador1 = new DataInputStream(primeiroJogador.getInputStream());
             DataOutputStream paraOJogador1 = new DataOutputStream(primeiroJogador.getOutputStream());
             DataInputStream doJogador2 = new DataInputStream(segundoJogador.getInputStream());
@@ -88,9 +78,7 @@ public class LobbyMultiplayer implements Runnable {
                     paraOJogador2.writeInt(DRAW);
                     enviarMovimento(paraOJogador2, row, column);
                     break;
-              
               } else {
-                   // Notificar 2 jogador para continuar o jogo.
                     paraOJogador2.writeInt(CONTINUE);
                     enviarMovimento(paraOJogador2, row, column);
               }
@@ -105,6 +93,7 @@ public class LobbyMultiplayer implements Runnable {
               System.out.println(); // Move to the next line after each row
             }
                  */
+              
                 row = doJogador2.readInt();
                 column = doJogador2.readInt();
                 tabuleiroJogoDaVelha[row][column] = 'O';
@@ -116,7 +105,6 @@ public class LobbyMultiplayer implements Runnable {
                     paraOJogador2.writeInt(PLAYER2_WON);
                     enviarMovimento(paraOJogador1, row, column);
                     break;
-                //if not send the move to first player
                 } else {
                     paraOJogador1.writeInt(CONTINUE);
                     enviarMovimento(paraOJogador1, row, column);
@@ -131,46 +119,37 @@ public class LobbyMultiplayer implements Runnable {
         
     }
     
-    private void enviarMovimento(DataOutputStream out, int row, int column) throws IOException {
+    boolean estaCheio() {
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (tabuleiroJogoDaVelha[i][j] != 'X' && tabuleiroJogoDaVelha[i][j] != 'O') {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+    
+    void enviarMovimento(DataOutputStream out, int row, int column) throws IOException {
         out.writeInt(row);
         out.writeInt(column);
     }
     
-      private boolean ganhou(char token) {
-        //checking main diagonal
-        if ((tabuleiroJogoDaVelha[0][0] == token) && (tabuleiroJogoDaVelha[1][1] == token) && (tabuleiroJogoDaVelha[2][2] == token))
+    boolean ganhou(char XouO) {
+        if ((tabuleiroJogoDaVelha[0][0] == XouO) && (tabuleiroJogoDaVelha[1][1] == XouO) && (tabuleiroJogoDaVelha[2][2] == XouO))
             return true;
-        
-        //checking second diagonal
-        if ((tabuleiroJogoDaVelha[0][2] == token) && (tabuleiroJogoDaVelha[1][1] == token) && (tabuleiroJogoDaVelha[2][0] == token))
+        if ((tabuleiroJogoDaVelha[0][2] == XouO) && (tabuleiroJogoDaVelha[1][1] == XouO) && (tabuleiroJogoDaVelha[2][0] == XouO))
             return true;
-        
-        //checking rows
         for (int i = 0; i < 3; i++) {
-            if ((tabuleiroJogoDaVelha[i][0] == token) && (tabuleiroJogoDaVelha[i][1] == token) && (tabuleiroJogoDaVelha[i][2] == token)) {
+            if ((tabuleiroJogoDaVelha[i][0] == XouO) && (tabuleiroJogoDaVelha[i][1] == XouO) && (tabuleiroJogoDaVelha[i][2] == XouO)) {
                 return true;
             }
-        }
-        
-        //checking columns
+        }        
         for (int j = 0; j < 3; j++) {
-            if ((tabuleiroJogoDaVelha[0][j] == token) && (tabuleiroJogoDaVelha[1][j] == token) && (tabuleiroJogoDaVelha[2][j] == token))
+            if ((tabuleiroJogoDaVelha[0][j] == XouO) && (tabuleiroJogoDaVelha[1][j] == XouO) && (tabuleiroJogoDaVelha[2][j] == XouO))
                 return true;
         }
-
         return false;
-    }
-      
-    private boolean estaCheio() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (tabuleiroJogoDaVelha[i][j] == ' ') {
-                    return false;
-                }
-            }
-        }
-
-        return true;
     }
         
 }

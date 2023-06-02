@@ -20,12 +20,34 @@ public class Server {
         Scanner teclado = new Scanner(System.in);
         int jogadores;
         Socket socketClient = null;
-        int porta = 54321;
+        int porta = 0;
         boolean continuar = true;
-        String ip = "127.0.0.1";
+        String ip = "";
+        boolean InputValido = false;
+        boolean ipValido = false;
 
-         System.out.println("Insira a porta que o servidor será hospedado");
-         porta = teclado.nextInt();
+
+        
+        while (!InputValido) {
+            System.out.println("Insira a porta que o servidor será hospedado: ");
+        if (teclado.hasNextInt()) {
+            porta = teclado.nextInt();
+            InputValido = true;
+        } else {
+            System.out.println("Por favor, insira um número válido para a porta.");
+            teclado.next(); 
+          }
+        }
+        
+        while (!ipValido) {
+        System.out.println("Insira o endereço IP do servidor: ");
+        ip = teclado.next();
+        if (IPeValido(ip)) {
+            ipValido = true;
+        } else {
+            System.out.println("Por favor, insira um endereço IP válido.");
+        }
+    }
         
         try {
             serverSocket = new ServerSocket(porta);
@@ -53,5 +75,14 @@ public class Server {
         } catch (Exception e) {
             System.out.println("Error" + e.getMessage());
         }
+    }
+     
+    public static boolean IPeValido(String ip) {
+        // DEBUG, checar se o ip inserido é válido.
+        String validador = "^([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\."
+                     + "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\."
+                     + "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\."
+                     + "([01]?\\d\\d?|2[0-4]\\d|25[0-5])$";
+        return ip.matches(validador);
     }
 }

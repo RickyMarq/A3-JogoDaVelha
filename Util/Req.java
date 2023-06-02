@@ -14,14 +14,12 @@ public class Req implements Serializable {
     private int rowIndex;
     private int colIndex;
     private boolean clearArray;
-    private boolean twoPlayers;
 
-    public Req(int operator, int rowIndex, int colIndex, boolean clearArray, boolean twoPlayers) {
+    public Req(int operator, int rowIndex, int colIndex, boolean clearArray) {
         this.operator = operator;
         this.rowIndex = rowIndex;
         this.colIndex = colIndex;
         this.clearArray = clearArray;
-        this.twoPlayers = twoPlayers;
     }
 
     public int getOperator() {
@@ -54,13 +52,5 @@ public class Req implements Serializable {
 
     public void setclearArray(boolean clearArray) {
         this.clearArray = clearArray;
-    }
-    
-    public boolean getTwoPlayers() {
-        return twoPlayers;
-    }
-
-    public void setTwoPlayers(boolean twoPlayers) {
-        this.twoPlayers = twoPlayers;
     }
 }
