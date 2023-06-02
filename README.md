@@ -12,6 +12,7 @@
   <a href="#desenvolvimento">Desenvolvimento</a> •
   <a href="#conclusão">Conclusão</a> •
   <a href="#ilustrações">Ilustrações</a> •
+  <a href="#rodar-o-projeto">Rodar o Projeto</a> •
   <a href="#autores">Autores</a>
 </p>
 
@@ -45,6 +46,39 @@ Em suma, o resultado final foi um jogo da velha interativo e funcional, que prop
      <img alt="png" src="./Imagens Github/Aviso.png" height="250"/>
 
 </p>
+
+
+### Rodar o Projeto
+
+Navegue até o diretório Server e rode o Server.java
+
+<p align="center">
+     <img alt="png" src="./Imagens Github/RodarProjeto-1.png" height="300"/>
+
+     O programa irá pedir que você insira o Ip e Porta, siga o exemplo 9191 e 127.0.0.1 e o servidor irá permitir conexões de clientes.
+</p>
+
+Logo após, navegue até o diretório Client e rode o Client.java
+
+<p align="center">
+     <img alt="png" src="./Imagens Github/RodarProjeto-2.png" height="300"/>
+
+     Assim, insira o IP e Porta para se conectar o servidor. Assim você poderá jogar no modo JogadorVsComputador.
+</p>
+
+<p align="center">
+     <img alt="png" src="./Imagens Github/RodarProjeto-3.png" height="300"/>
+
+     Para jogar no modo dois jogadores você navegar até o diretório Server e rodar o ServerDoisJogadores.java, inserindo uma porta (Deve ser diferente da porta do Servidor anterior). 
+</p>
+
+<p align="center">
+     <img alt="png" src="./Imagens Github/RodarProjeto-4.png" height="300"/>
+
+     No aplicativo já aberto navegue até o menu JogadorVsJogador, e insira a porta do servidor dois jogadores, no nosso exemplo 1818. Dessa forma, quando dois jogadores se conectarem o jogo irá iniciar.
+</p>
+
+
 
 ### Autores
 
