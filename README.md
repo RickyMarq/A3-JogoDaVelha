@@ -37,6 +37,15 @@ Em suma, o resultado final foi um jogo da velha interativo e funcional, que prop
 
 ### Ilustrações
 
+<p align="center">
+     <img alt="png" src="./Imagens Github/SplashScreen.png" height="250"/>
+     <img alt="png" src="./Imagens Github/EscolherModo.png" height="250"/>
+     <img alt="png" src="./Imagens Github/PcVsPlayer.png" height="250"/>
+     <img alt="png" src="./Imagens Github/DoisJogadores.png" height="250"/>
+     <img alt="png" src="./Imagens Github/Aviso.png" height="250"/>
+
+</p>
+
 ### Autores
 
 * 12522135201 - Henrique Ferreira Marques Costa
