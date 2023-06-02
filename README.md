@@ -16,7 +16,7 @@
   <a href="#autores">Autores</a>
 </p>
 
-### Introdução 📖
+### Introdução
 
 O jogo da velha consiste em um jogo onde você precisa colocar três símbolos iguais em uma linha reta. o tabuleiro é consiste em uma cerquilha onde cada jogador escolhe se quer ser o "X" ou o "O". Vocês vão se revezar colocando o seu símbolo nas lacunas vazias. O objetivo é fazer uma linha reta com os seus símbolos: pode ser na horizontal, na vertical ou na diagonal. Se ninguém conseguir fazer uma linha e todas as lacunas forem preenchidas, o jogo acaba em empate. 
 
@@ -24,7 +24,7 @@ O principal objetivo desse projeto foi realizar a criação de uma plataforma qu
 
 Foi realizado a escolha do jogo da velha devido a sua simplicidade e de conhecimento de todos por parte de suas regras. No decorrer deste documento, serão abordados os detalhes da implementação, incluindo a escolha das tecnologias a serem utilizadas, a arquitetura do sistema, os recursos oferecidos aos jogadores e os desafios técnicos envolvidos 
 
-### Desenvolvimento 📖
+### Desenvolvimento
 
 Durante o desenvolvimento do projeto verificamos quais seriam os requisitos para a produção de um jogo da velha na linguagem de Java, após termos escolhido o jogo e verificar as instruções propostas pelo professor seguimos para parte de desenvolvimento onde buscamos realizar a estruturação do código via Jframe pois buscamos realizar algo interativo ao usuário. 
 
@@ -34,14 +34,14 @@ Durante a etapa de implementação da lógica para a validação de movimentos e
 
 Durante o projeto buscamos melhorar a experiência do usuário utilizando elementos gráficos como tela de carregamento e um ambiente interativo por meio do Jframe e imagens para escolha do modo de jogo. 
 
-### Conclusão 📖
+### Conclusão
 
 Ao longo deste projeto, desenvolvemos um jogo da velha em Java, implementando um servidor e cliente para permitir partidas interativas, para garantir a validação dos movimentos e o armazenamento das informações, utilizamos uma matriz de botões e uma lógica para verificar a vez de cada jogador. Também adicionamos recursos visuais, como uma tela de carregamento e imagens para a escolha do modo de jogo, aprimorando a experiência do usuário.
 
 O desenvolvimento deste projeto nos permitiu aplicar conceitos de programação em Java, desenvolvimento de interfaces gráficas e lógica de jogo. Enfrentamos desafios técnicos ao estabelecer a comunicação cliente/servidor e validar os movimentos, mas fomos capazes de superá-los com dedicação e resolução de problemas.
 Em suma, o resultado final foi um jogo da velha interativo e funcional, que proporciona aos jogadores uma experiência divertida e envolvente. Este projeto nos permitiu aprimorar nossas habilidades de programação, continuaremos explorando novos projetos e expandindo nosso conhecimento em desenvolvimento de jogos e aplicações. Agradecemos a oportunidade de realizar este trabalho e buscaremos expandir nosso conhecimento a fim de cada vez mais desenvolver nossos projetos e aprimorar os já realizados.
 
-### Ilustrações 📸
+### Ilustrações
 
 <p align="center">
      <img alt="png" src="./Imagens Github/SplashScreen.png" height="250"/>
@@ -51,7 +51,7 @@ Em suma, o resultado final foi um jogo da velha interativo e funcional, que prop
 </p>
 
 
-### Rodar o Projeto 🛠
+### Rodar o Projeto
 
 Navegue até o diretório Server e rode o Server.java
 
@@ -82,14 +82,14 @@ Para jogar no modo dois jogadores você deve navegar até o diretório Server e 
 </h3>
 
 <p align="center">
-     <img alt="png" src="./Imagens Github/RodarProjeto-4.png" height="500"/>
+     <img alt="png" src="./Imagens Github/RodarProjeto-4.png" height="300"/>
 </p>
 
 <h3 align="center"> No aplicativo já aberto navegue até o menu JogadorVsJogador, e insira a porta do servidor dois jogadores, no nosso exemplo 1818. Dessa forma, quando dois jogadores se conectarem o jogo irá iniciar.
 </h3>
 
 
-### Autores 🧑‍💻
+### Autores
 
 * 12522135201 - Henrique Ferreira Marques Costa
 * 12522142460 - João Nicolas Melo Dantas
