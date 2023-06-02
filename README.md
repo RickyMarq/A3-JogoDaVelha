@@ -17,9 +17,23 @@
 
 ### Introdução
 
+O jogo da velha consiste em um jogo onde você precisa colocar três símbolos iguais em uma linha reta. o tabuleiro é consiste em uma cerquilha onde cada jogador escolhe se quer ser o "X" ou o "O". Vocês vão se revezar colocando o seu símbolo nas lacunas vazias. O objetivo é fazer uma linha reta com os seus símbolos: pode ser na horizontal, na vertical ou na diagonal. Se ninguém conseguir fazer uma linha e todas as lacunas forem preenchidas, o jogo acaba em empate.
+O principal objetivo desse projeto foi realizar a criação de uma plataforma que se comunicasse através de um servidor onde seria possivel jogar tanto com uma máquina randomica cliente/servidor, mas também contra outro jogador realizando a comunicação de cliente/cliente.
+Foi realizado a escolha do jogo da velha devido a sua simplicidade e de conhecimento de todos por parte de suas regras. No decorrer deste documento, serão abordados os detalhes da implementação, incluindo a escolha das tecnologias a serem utilizadas, a arquitetura do sistema, os recursos oferecidos aos jogadores e os desafios técnicos envolvidos
+
 ### Desenvolvimento
 
+Durante o desenvolvimento do projeto verificamos quais seriam os requisitos para a produção de um jogo da velha na linguagem de Java, após termos escolhido o jogo e verificar as instruções propostas pelo professor seguimos para parte de desenvolvimento onde buscamos realizar a estruturação do código via Jframe pois buscamos realizar algo interativo ao usuário.
+Após termos escolhido a forma que realizaríamos a estrutura do projeto seguimos com a para a comunicação de servidor e cliente onde, inicialmente, a ideia principal foi gerar uma porta e IP fixos para rodar o projeto e começar a produzir o Back-end. Após a implementação do cliente/servidor por meio do método "Try" e "Catch" começamos a realizar a implementação da interface do usuário para que o mesmo conseguisse se comunicar com o servidor e obtesse uma resposta.
+Durante a etapa de implementação da lógica para a validação de movimentos e armazenamento das informações utilizamos uma array para os jogadores e um método de armazenamento de dados em botões onde, ao jogar contra outro jogador, é possível receber as informações em tempo real de cada jogada e uma função de aviso caso o mesmo tente jogar caso não seja sua vez.
+Durante o projeto buscamos melhorar a experiência do usuário utilizando elementos gráficos como tela de carregamento e um ambiente interativo por meio do Jframe e imagens para escolha do modo de jogo.
+
 ### Conclusão
+
+Ao longo deste projeto, desenvolvemos um jogo da velha em Java, implementando um servidor e cliente para permitir partidas interativas, para garantir a validação dos movimentos e o armazenamento das informações, utilizamos uma matriz de botões e uma lógica para verificar a vez de cada jogador. Também adicionamos recursos visuais, como uma tela de carregamento e imagens para a escolha do modo de jogo, aprimorando a experiência do usuário.
+
+O desenvolvimento deste projeto nos permitiu aplicar conceitos de programação em Java, desenvolvimento de interfaces gráficas e lógica de jogo. Enfrentamos desafios técnicos ao estabelecer a comunicação cliente/servidor e validar os movimentos, mas fomos capazes de superá-los com dedicação e resolução de problemas.
+Em suma, o resultado final foi um jogo da velha interativo e funcional, que proporciona aos jogadores uma experiência divertida e envolvente. Este projeto nos permitiu aprimorar nossas habilidades de programação, continuaremos explorando novos projetos e expandindo nosso conhecimento em desenvolvimento de jogos e aplicações. Agradecemos a oportunidade de realizar este trabalho e buscaremos expandir nosso conhecimento a fim de cada vez mais desenvolver nossos projetos e aprimorar os já realizados.
 
 ### Ilustrações
 
